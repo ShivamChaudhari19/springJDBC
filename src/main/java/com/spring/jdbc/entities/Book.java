@@ -1,11 +1,18 @@
-package com.spring.jdbc;
+package com.spring.jdbc.entities;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
-
+@Component
 public class Book {
+    @Value("19")
     private int bkid;
+    @Value("demo19")
     private String title;
+    @Value("demoAutor19")
     private String author;
+    @Value("999.99")
     private double cost;
     private Date date=new Date();
 
