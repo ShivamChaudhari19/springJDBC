@@ -8,9 +8,9 @@ import java.util.Date;
 public class Book {
     @Value("19")
     private int bkid;
-    @Value("demo19")
+    @Value("demo19updated")
     private String title;
-    @Value("demoAutor19")
+    @Value("demoAutor19updated")
     private String author;
     @Value("999.99")
     private double cost;

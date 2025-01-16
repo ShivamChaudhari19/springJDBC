@@ -12,7 +12,11 @@ public class BookDaoImpl implements BookDao {
     @Override
     public int insert(Book book) {
         String q="INSERT INTO book(BKid,title,author,cost)values(?,?,?,?)";
-        int r=this.jdbcTemplate.update(q,book.getBkid(),book.getTitle(),book.getAuthor(),book.getCost());
-        return r;
+        return this.jdbcTemplate.update(q,book.getBkid(),book.getTitle(),book.getAuthor(),book.getCost());
     }
+    public int update(Book book){
+        String q="UPDATE BOOK SET title=?,author=? where Bkid=?;";
+        return this.jdbcTemplate.update(q,book.getTitle(),book.getAuthor(),book.getBkid());
+    }
+
 }
