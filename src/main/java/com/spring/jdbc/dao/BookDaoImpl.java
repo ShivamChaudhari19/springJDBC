@@ -6,6 +6,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.Map;
+
 @Component
 public class BookDaoImpl implements BookDao {
     @Autowired
@@ -29,5 +32,12 @@ public class BookDaoImpl implements BookDao {
         String q="SELECT * from book where BKid=?";
         RowMapper<Book> rowMapper=new RowMapperImpl();
         return this.jdbcTemplate.queryForObject(q, rowMapper, BKid);
+    }
+
+    @Override
+    public List<Book> getAllBooks() {
+        String q="SELECT * FROM BOOK";
+        RowMapper<Book> rowMapper= new RowMapperImpl();
+        return this.jdbcTemplate.query(q,rowMapper);
     }
 }
