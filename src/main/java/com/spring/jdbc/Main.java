@@ -15,6 +15,7 @@ public class Main {
         BookDaoImpl bookDaoImpl = context.getBean("bookDaoImpl", BookDaoImpl.class);
 //        System.out.println("number of record inserted:" + bookDaoImpl.insert(book));
 //        System.out.println("updated records:"+bookDaoImpl.update(book));
-        System.out.println("Deleted records:"+bookDaoImpl.delete(book));
+//        System.out.println("Deleted records:"+bookDaoImpl.delete(book));
+        System.out.println(bookDaoImpl.getBook(1));
     }
 }

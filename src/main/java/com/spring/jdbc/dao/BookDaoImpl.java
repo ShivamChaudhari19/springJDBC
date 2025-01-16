@@ -3,6 +3,7 @@ package com.spring.jdbc.dao;
 import com.spring.jdbc.entities.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -21,5 +22,12 @@ public class BookDaoImpl implements BookDao {
     public int delete(Book book){
         String q="DELETE FROM BOOK where Bkid=?;";
         return this.jdbcTemplate.update(q,book.getBkid());
+    }
+
+    @Override
+    public Book getBook(int BKid) {
+        String q="SELECT * from book where BKid=?";
+        RowMapper<Book> rowMapper=new RowMapperImpl();
+        return this.jdbcTemplate.queryForObject(q, rowMapper, BKid);
     }
 }
