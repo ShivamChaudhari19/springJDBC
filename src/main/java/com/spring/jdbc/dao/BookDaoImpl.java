@@ -18,5 +18,8 @@ public class BookDaoImpl implements BookDao {
         String q="UPDATE BOOK SET title=?,author=? where Bkid=?;";
         return this.jdbcTemplate.update(q,book.getTitle(),book.getAuthor(),book.getBkid());
     }
-
+    public int delete(Book book){
+        String q="DELETE FROM BOOK where Bkid=?;";
+        return this.jdbcTemplate.update(q,book.getBkid());
+    }
 }
