@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e8b2b3f0-f79f-4508-b3ad-7ebc979b7d71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/jdbc/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/jdbc/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/jdbc/dao/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/jdbc/dao/BookDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/jdbc/dao/RowMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/jdbc/dao/RowMapperImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
