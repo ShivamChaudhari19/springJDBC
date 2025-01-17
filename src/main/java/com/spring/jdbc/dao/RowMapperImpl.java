@@ -19,4 +19,3 @@ public class RowMapperImpl implements RowMapper<Book> {
         return book;
     }
 }
-        }
